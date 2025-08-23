@@ -663,6 +663,8 @@ class Build:
             [
                 *nix_shell("nixpkgs#attic-client", "attic"),
                 "push",
+                "--jobs",
+                "1",
                 opts.attic_cache,
                 self.outputs["out"],
             ],
